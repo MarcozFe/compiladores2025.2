@@ -1,0 +1,25 @@
+program MyProgram {
+    class MainClass extends BaseClass {
+        const int maxValue = 1000;
+        void main() {
+            int x = 568;
+            float y = 3.14;
+            char c = 'a';
+            string s = "Hello, World!";
+            bool flag = true;
+
+            if (x > 0 && flag) {
+                print("Valor: " + x);
+            } else {
+                print("Negativo");
+            }
+
+            while (x < maxValue) {
+                x++;
+            }
+
+            read(x);
+            return;
+        }
+    }
+}
