@@ -20,7 +20,7 @@
 <=, ASSIGN>
 <568, NUM_INT>
 <;, SEMICOLON>
-<float, TYPE>
+<float, ID>
 <y, ID>
 <=, ASSIGN>
 <3.14, REAL>

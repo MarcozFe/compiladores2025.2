@@ -1,0 +1,7 @@
+class Sample {
+    public void doSomething() {
+        // This is a comment
+        int x = 5;
+        int y = x * 2;
+    }
+}

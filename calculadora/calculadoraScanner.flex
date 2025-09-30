@@ -58,7 +58,7 @@ ESPACO    = [ \t\r\n]+
 {NUM_FLOAT}   { initWriterIfNeeded(); writer.write("<" + yytext() + ", FLOAT>\n"); }
 {NUM_INT}     { initWriterIfNeeded(); writer.write("<" + yytext() + ", INT>\n"); }
 
-.             { throw new Error("Símbolo inválido: " + yytext() + " na linha " + (yyline + 1) + ", coluna " + (yycolumn + 1)); }
+.             { throw new Error("Símbolo inválido: '" + yytext() + "' na linha " + (yyline + 1) + ", coluna " + (yycolumn + 1)); }
 
 
 

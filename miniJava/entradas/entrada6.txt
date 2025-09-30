@@ -1,0 +1,8 @@
+class ArrayTest {
+    public void run() {
+        int[] nums = new int[10];
+        if (nums.length > 0 && nums[0] == 0) {
+            nums[0] = 1;
+        }
+    }
+}

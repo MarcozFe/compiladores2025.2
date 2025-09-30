@@ -1,11 +1,3 @@
-<(, LPAREN>
-<3, INT>
-<+, PLUS>
-<4.5, FLOAT>
-<), RPAREN>
-<*, TIMES>
-<10, INT>
-<//, INTDIV>
+<1, INT>
+<-, MINUS>
 <2, INT>
-<**, POW>
-<3, INT>

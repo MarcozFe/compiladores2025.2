@@ -40,7 +40,7 @@ NUM_INT         = {DIGITO}{1,5}
 unsigned_number = {DIGITO}{1,5}[uU]
 real_number     = {DIGITO}+ "." {DIGITO}+
 string_literal  = \"[^\"]*\"
-char_literal = \' . \'
+char_literal    = \' . \'
 space           = [ \t\r]+
 
 %%
@@ -63,8 +63,6 @@ space           = [ \t\r]+
 "int"                           { initWriterIfNeeded(); writer.write("<" + yytext() + ", TYPE>\n"); }
 "unsigned"                      { initWriterIfNeeded(); writer.write("<" + yytext() + ", TYPE>\n"); }
 "char"                          { initWriterIfNeeded(); writer.write("<" + yytext() + ", TYPE>\n"); }
-"double"                        { initWriterIfNeeded(); writer.write("<" + yytext() + ", TYPE>\n"); }
-"float"                         { initWriterIfNeeded(); writer.write("<" + yytext() + ", TYPE>\n"); }
 "eol"                           { initWriterIfNeeded(); writer.write("<" + yytext() + ", CHAR>\n"); }
 "switch"                        { initWriterIfNeeded(); writer.write("<" + yytext() + ", SWITCH>\n"); }
 "void"                          { initWriterIfNeeded(); writer.write("<" + yytext() + ", VOID>\n"); }
