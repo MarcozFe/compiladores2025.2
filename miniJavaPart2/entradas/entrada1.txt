@@ -1,0 +1,5 @@
+program Exemplo1 {
+    void main() {
+        print(1);
+    }
+}

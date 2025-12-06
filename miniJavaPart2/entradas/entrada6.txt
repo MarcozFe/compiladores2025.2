@@ -1,0 +1,6 @@
+program ErroLexico {
+    void main() {
+        int x = 10;
+        int y = x @ 2;  // O Scanner vai gritar aqui!
+    }
+}

@@ -1,0 +1,7 @@
+program ErroSintatico {
+    void main() {
+        if (10 > 2) {
+            print(1)  // Falta o ponto e virgula aqui! O Parser vai reclamar.
+        }
+    }
+}

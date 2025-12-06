@@ -1,0 +1,16 @@
+program Sistema {
+    class Pessoa {
+        string nome;
+        int idade;
+    }
+    
+    void processar() {
+        int a = 10;
+        const int MAX = 100;
+        /* Comentario de bloco
+           ignorando tudo aqui */
+        if (a == MAX) {
+            return;
+        }
+    }
+}
