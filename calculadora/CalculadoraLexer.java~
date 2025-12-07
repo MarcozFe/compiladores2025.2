@@ -618,7 +618,7 @@ public class CalculadoraLexer {
       if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
         zzAtEOF = true;
               {
-                initWriterIfNeeded(); writer.write("<eof, eof>\n"); closeWriter(); return 0;
+                initWriterIfNeeded(); writer.write("<eof, eof>\n");
               }
       }
       else {

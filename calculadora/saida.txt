@@ -1,3 +1,14 @@
-<1, INT>
-<-, MINUS>
-<2, INT>
+<(, l_paren>
+<3, int>
+<+, plus>
+<4.5, float>
+<), r_paren>
+<*, mult>
+<2, int>
+<+, plus>
+<10, int>
+<//, int_div>
+<2, int>
+<**, pow>
+<3, int>
+<eof, eof>

@@ -44,21 +44,20 @@ ESPACO    = [ \t\r\n]+
 
 {ESPACO}      { /* ignora espaços */ }
 
-"("           { initWriterIfNeeded(); writer.write("<" + yytext() + ", I_PAREN>\n"); }
-")"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", F_PAREN>\n"); }
+"("           { initWriterIfNeeded(); writer.write("<" + yytext() + ", l_paren>\n"); }
+")"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", r_paren>\n"); }
 
-"**"          { initWriterIfNeeded(); writer.write("<" + yytext() + ", POW>\n"); }
-"//"          { initWriterIfNeeded(); writer.write("<" + yytext() + ", INT_DIV>\n"); }
+"**"          { initWriterIfNeeded(); writer.write("<" + yytext() + ", pow>\n"); }
+"//"          { initWriterIfNeeded(); writer.write("<" + yytext() + ", int_div>\n"); }
 
-"+"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", PLUS>\n"); }
-"-"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", MINUS>\n"); }
-"*"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", MULT>\n"); }
-"/"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", DIV>\n"); }
+"+"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", plus>\n"); }
+"-"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", minus>\n"); }
+"*"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", mult>\n"); }
+"/"           { initWriterIfNeeded(); writer.write("<" + yytext() + ", div>\n"); }
 
-{NUM_FLOAT}   { initWriterIfNeeded(); writer.write("<" + yytext() + ", FLOAT>\n"); }
-{NUM_INT}     { initWriterIfNeeded(); writer.write("<" + yytext() + ", INT>\n"); }
+{NUM_FLOAT}   { initWriterIfNeeded(); writer.write("<" + yytext() + ", float>\n"); }
+{NUM_INT}     { initWriterIfNeeded(); writer.write("<" + yytext() + ", int>\n"); }
+
+<<EOF>>       { initWriterIfNeeded(); writer.write("<eof, eof>\n"); closeWriter(); return 0; }
 
 .             { throw new Error("Símbolo inválido: '" + yytext() + "' na linha " + (yyline + 1) + ", coluna " + (yycolumn + 1)); }
-
-
-
