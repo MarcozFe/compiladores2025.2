@@ -38,9 +38,6 @@ import java.io.IOException;
     }
 %}
 
-/* DEFINICOES */
-
-/* [Blindagem] Aceita espaco, tab, nova linha, form feed e ESPACO SEM QUEBRA (A0) */
 SPACE   = [ \t\r\n\f\u00A0]+
 
 LETRA   = [a-zA-Z_]
@@ -53,7 +50,6 @@ NUM_INT = {DIGITO}+
 %%
 
 <YYINITIAL> {
-  /* Regra de Espacos - Deve vir no topo das regras */
   {SPACE}             { /* Ignora espacos */ }
 
   "//".* { /* Ignora comentario de linha */ }
