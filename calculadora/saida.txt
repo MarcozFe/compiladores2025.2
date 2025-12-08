@@ -1,12 +1,11 @@
 <(, l_paren>
+<-, minus>
 <3, int>
 <+, plus>
 <4.5, float>
 <), r_paren>
 <*, mult>
 <2, int>
-<+, plus>
-<10, int>
 <//, int_div>
 <2, int>
 <**, pow>
